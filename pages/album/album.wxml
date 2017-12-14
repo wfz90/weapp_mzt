@@ -1,0 +1,20 @@
+<import src="../../components/gallery/gallery.wxml" />
+<template is="gallery" data="{{ ...$wux.gallery }}" />
+<view class="container">
+
+    <scroll-view scroll-y="true" class="image-list-wrap">
+    <block wx:for="{{album}}" wx:key="" wx:item="{{item}}">
+      <view>
+        <image bindload="imageload" bindtap="preiviewwImage" mode="aspectFit" src="{{item.url}}" data-src="{{item.url}}" data-index="{{index}}" style="width:{{item.w}}rpx;height:{{item.h}}rpx" />
+      </view>
+    </block>
+  </scroll-view>  
+
+     <!-- <scroll-view scroll-y="true" class="image-list-wrap">
+    <block wx:for-items="{{album}}" wx:key="{{ index }}">
+      <view>
+        <image bindload="imageload" bindtap="showGallery" mode="aspectFit" src="{{item.url}}" data-src="{{item.url}}" data-index="{{index}}" data-current="{{ index }}" style="width:{{item.w}}rpx;height:{{item.h}}rpx" />
+      </view>
+    </block>
+  </scroll-view>  -->
+</view>

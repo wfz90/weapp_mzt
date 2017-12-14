@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/album/album",
+    "pages/index/about"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fe688d",
+    "navigationBarTitleText": "妹子图",
+    "navigationBarTextStyle": "white"
+  }
+}

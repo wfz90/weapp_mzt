@@ -1,0 +1,14 @@
+/**app.wxss**/
+@import 'components/wux.wxss';
+@import 'assets/styles/weui.wxss';
+@import 'assets/styles/skyvow.wxss';
+page{
+  height: 100%;
+  background-color: #ffffff;
+}
+.container {
+  min-height: 100%;
+  box-sizing: border-box;
+  position: relative;
+} 
+

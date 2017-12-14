@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<import src="../../components/dialog/dialog.wxml"/>
+
+<template is="dialog" data="{{ ...$wux.dialog }}"/>
+<view class="container">
+  <!--nav  bar-->
+  <view class="nav_bar">
+    <scroll-view class="nav_bar_scroll" scroll-x="true">
+      <block wx:for="{{types}}" wx:key="" wx:for-item="type">
+        <!-- <block wx:if="{{type.is_show}}"> -->
+          <view bindtap="changeType" class="{{type.id == currentType ? 'current' : ''}} scroll_item" data-value="{{type.id}}">{{type.name}}</view>
+        <!-- </block> -->
+      </block>
+    </scroll-view>
+    <!-- <view class="edit_nav_bar" bindtap="gotoTypeEdit">
+        <image class="edit_nav_bar_btn" src="/image/nav_bar_edit.png"></image>  
+    </view> -->
+  </view>
+ 
+  <!--beauty list content-->
+  <view class="content">
+    <block wx:for="{{contentList}}" wx:key="">
+      <view class="beauty_item" data-id="{{item.id}}" data-title="{{item.title}}" data-lev="{{item.lev}}" bindtap="gotoAlbum">
+        <image src="{{item.thumb}}" mode="aspectFill"></image>
+        <text>{{item.title}}</text>
+    </view>
+    </block>
+    
+  </view>
+  
+  
+</view>
